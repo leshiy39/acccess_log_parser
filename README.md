@@ -21,3 +21,8 @@ Task: Необходимо написать программу на любом �
 Sample output
 
 ![Output](sample_output.jpg)
+
+# One line decision
+```bash
+awk -v filter="500" -F ';' '$3 == filter { print $1 }' access.log | sort | uniq  | sort -nr | head -n 10
+```
